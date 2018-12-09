@@ -1,0 +1,19 @@
+{
+  "name": "zjuwlan",
+  "version": "0.1.0",
+  "description": "Command line tool for authenticating to ZJUWLAN.",
+  "main": "zjuwlan.js",
+  "repository": "https://github.com/awmleer/zjuwlan",
+  "author": "awmleer",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "zjuwlan": "zjuwlan.js"
+  },
+  "scripts": {
+    "zjuwlan": "node zjuwlan.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
