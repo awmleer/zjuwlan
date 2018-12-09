@@ -1,6 +1,6 @@
 {
   "name": "zjuwlan",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Command line tool for authenticating to ZJUWLAN.",
   "main": "zjuwlan.js",
   "repository": "https://github.com/awmleer/zjuwlan",
@@ -16,6 +16,7 @@
   "dependencies": {
     "commander": "^2.19.0",
     "conf": "^2.1.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "update-notifier": "^2.5.0"
   }
 }

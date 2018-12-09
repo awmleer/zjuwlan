@@ -2,9 +2,15 @@
 
 const program = require('commander')
 const request = require('request')
-const Conf = require('conf');
 
-const config = new Conf();
+const Conf = require('conf')
+const config = new Conf()
+
+const updateNotifier = require('update-notifier')
+const pkg = require('./package.json')
+updateNotifier({pkg}).notify()
+
+
 
 
 program
