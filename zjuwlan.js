@@ -11,9 +11,6 @@ program
   .version('0.1.0', '-v, --version')
 
 program
-  // .command('login', 'login to ZJUWLAN', {
-  //   isDefault: true
-  // })
   .option('-p, --password [password]', 'use the given password')
   .option('-u, --username [username]', 'use the given username')
   .parse(process.argv)
