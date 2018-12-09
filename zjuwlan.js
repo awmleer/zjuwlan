@@ -12,8 +12,8 @@ program
   .option('-p, --password [password]', 'use the given password')
   .option('-u, --username [username]', 'use the given username')
   .action(function (cmd) {
-    // console.log(`login ${cmd.username} ${cmd.password}`)
     const {username, password} = cmd
+    console.log(`Logging in with account ${username}...`)
     request.post({
       url: 'http://net.zju.edu.cn:802/include/auth_action.php',
       headers: {
@@ -38,11 +38,14 @@ program
       }
     }, (error, response, body) => {
       if (error) {
-        console.error('login failed')
+        console.error(`Request failed.`)
         return
       }
-      console.log(response.body)
-      console.log(response.body.includes('login_ok'))
+      if (body.includes('login_ok')) {
+        console.log('Success.')
+      } else {
+        console.error(`Failed: ${body}`)
+      }
     })
   })
 
